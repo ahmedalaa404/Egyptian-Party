@@ -29,14 +29,8 @@ var typed = new Typed('.typing-persone-name',{
     smartBackspace: false // Default value
 
   });
-
-
 //   plugins wow
-
-
-
 //   navbar 
-
 let settings=$("#settings");
 let links=$('.links-setting');
 settings.css('left',`-${links.innerWidth()}px`)
@@ -62,10 +56,7 @@ $(`i[class="fa-solid fa-x"]`) .click(changeNavs);
         let sectionsOffst=$(`${anchoreClicks}`).offset().top;
         $("html,body").animate({scrollTop:sectionsOffst+'px'},2000);
         settings.animate({left:`-${links.innerWidth()}`},2000);
-
     })
-
-
 //     // end of navbar
 
     $(".quotes-persone h3").click(
@@ -76,9 +67,20 @@ $(`i[class="fa-solid fa-x"]`) .click(changeNavs);
             detalis.parent().siblings().find('p').slideUp(500);
         }
     )
-       
-    const now = new Date();
 
-
-        // date=setDate()
-    console.dir(date.getTime())
+        function settime()
+        {
+            const now = new Date();
+            const nextDate = new Date((now.getFullYear()+1),0, 1);
+            let between = nextDate.getTime()-now.getTime();
+               let s=Math.floor(between/1000);
+               let m=Math.floor(s/60)
+               let h=Math.floor(m/60)
+               let d=Math.floor((h/24))
+            $('.days').html(`<span class="mx-2 fs-5">${d}</span> D`);
+            $('.hours').html(`<span class="mx-2 fs-5">${h%24}</span> H`);
+            $('.minuts').html(`<span class="mx-2 fs-5">${m%60}</span> M`);
+            $('.secounds').html(`<span class="mx-2 fs-5">${s%60}</span> s`);
+            setTimeout(settime, 1000);
+        }
+        settime()
