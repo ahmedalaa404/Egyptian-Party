@@ -1,0 +1,111 @@
+body
+{
+    overflow: hidden;
+    overflow-x: hidden !important;
+}
+.s-loading
+{
+    z-index: 999;
+}
+html
+{
+    scroll-behavior:auto !important;
+}
+
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+.links-setting 
+{
+    width: 250px;
+    background-color: #414658 ;
+    display: flex;
+    align-items: center;
+}
+
+.settings i,.list-group li a
+{
+    cursor: pointer;
+}
+.links-setting i
+{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.quotes-persone-s
+
+{
+    width:40%;
+    text-align: center !important;
+}
+.quotes-persone h3
+{
+        transition: 1s color;
+        cursor: pointer;
+}
+.quotes-persone h3:hover
+{
+    color: rgba(158, 89, 89, 0.868) !important;
+}
+.quotes-persone p 
+{
+    display: none;
+}
+
+.links-setting i:hover ,i[class="fa-solid fa-bars me-3 fs-2"]:hover
+{
+    color: rgb(133, 125, 125);
+}
+.list-group
+{
+    list-style: none;
+}
+.list-group li a:hover
+{
+    color: rgba(220, 215, 215, 0.671) !important;
+}
+
+#egyptian
+{
+    height: 100vh;
+    width: 100%;
+    background-image:url("../image/events-heavenly-header.jpg") ;
+    background-size: cover;
+    background-position: center;
+}
+.layer
+{
+    background-color: rgba(30, 0, 0, 0.752);
+}
+
+.time
+{
+    background-image: url("../image/invitation-2508607__340.jpg");
+}
+
+ 
