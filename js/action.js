@@ -1,4 +1,7 @@
 // loading screen
+let about=$("#about");
+let Time=$("#Time");
+let scer=$(".scroll")
 
 $(document).ready(function()
 {
@@ -6,7 +9,24 @@ $(document).ready(function()
     $('.s-loading').remove();
     $('body').css('overflow','auto')
 })
+// scroll
 
+$(window).scroll
+(
+    //         console.log($(window).scrollTop())
+    function()
+    {
+        // console.log($(window).scrollTop())
+        if($(window).scrollTop()>=(about.offset().top-280) && ($(window).scrollTop()<=Time.offset().top-30 ))
+        {
+            scer.attr('style', 'color: black !important');
+        }
+        else
+        {
+            scer.attr('style', 'color: white !important'); 
+        }
+    }
+)
 new WOW().init();
 
 // typing plugins
@@ -67,6 +87,7 @@ $(`i[class="fa-solid fa-x"]`) .click(changeNavs);
             detalis.parent().siblings().find('p').slideUp(500);
         }
     )
+    
 
         function settime()
         {
@@ -83,4 +104,4 @@ $(`i[class="fa-solid fa-x"]`) .click(changeNavs);
             $('.secounds').html(`<span class="mx-2 fs-5">${s%60}</span> s`);
             setTimeout(settime, 1000);
         }
-        settime()
+            settime()
