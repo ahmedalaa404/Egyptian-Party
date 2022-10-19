@@ -105,3 +105,28 @@ $(`i[class="fa-solid fa-x"]`) .click(changeNavs);
             setTimeout(settime, 1000);
         }
             settime()
+
+
+            regex=/^[a-zA-z]{0,100}$/
+            let write =$(".writting");
+            let area =document.querySelector("textarea");
+            area.addEventListener('input',
+            function()
+            
+            {
+                if(regex.test(area.value)==true)
+                {
+                    write.html(`${100-area.value.length}`)
+                }
+                if(area.value.length==100)
+                {
+                    write.html("your available character finished");
+                }
+            
+            
+            })
+
+
+
+   
+            
