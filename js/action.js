@@ -118,7 +118,7 @@ $(`i[class="fa-solid fa-x"]`) .click(changeNavs);
                 {
                     write.html(`${100-area.value.length}`)
                 }
-                if(area.value.length==100)
+                if(area.value.length>=100)
                 {
                     write.html("your available character finished");
                 }
